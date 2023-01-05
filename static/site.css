@@ -1,0 +1,24 @@
+#melon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.melon-list-item{
+    width: 300px;
+    margin: 10px 0px 10px 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.melon-image {
+    height: 300px;
+    width: 300px;
+}
+
+h1 {
+    text-align: center; 
+}
