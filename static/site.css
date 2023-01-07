@@ -5,8 +5,9 @@
     
 }
 
-.melon-list-item{
+.melon-item-head{
     width: 300px;
+    height: 450px;
     margin: 10px 0px 10px 0px;
 
     display: flex;
@@ -14,16 +15,45 @@
     justify-content: space-between;
 }
 
+.melon-img-div {
+    height: 60%;
+
+    align-self: center;
+    margin: 0px 10px 10px 10px;
+}
+
 .melon-image {
-    height: 300px;
-    width: 300px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 h1 {
     text-align: center; 
 }
 
-a {
-    text-decoration: none;
-    color: white;
+.list-item-acc {
+    display: flex;
+    justify-content: center;
+}
+
+.detailed-melon {
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.melon-details-card {
+    padding: 10px;
+    min-width: fit-content;
+    width: 70%;
+    margin-left: 10px;
+}
+
+.add-to-cart-btn-div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }

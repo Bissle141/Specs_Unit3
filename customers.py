@@ -1,3 +1,5 @@
+import pprint
+
 customers = {
     'mel': {'username': 'mel', 'password': 'password', 'name': 'Mel Wilson'},
     'squash': {'username': 'squash', 'password': '1234', 'name': 'Sara Squash'},
@@ -7,3 +9,4 @@ customers = {
 
 def get_by_username(username):
     return customers.get(username)
+

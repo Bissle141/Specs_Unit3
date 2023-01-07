@@ -1,17 +1,28 @@
 {% extends 'base.html' %}
 
 {% block body %}
-    <h1>{{ melon.common_name }}</h1>
+<div class="detailed-melon">
     <img class="melon-image" src="{{ melon.image_url }}" alt=" Image of {{ melon.common_name }}">
-    <h2>Price per melon: {{ melon.price_str() }}</h2>
-    <ul>
-        <li>Color: {{ melon.color }}</li>
-        {% if melon.seedless %}
-            <li>Seedless Melon</li>
-        {% else %}
-            <li>Warning! This melon has seeds</li>
-        {% endif %}
-    </ul>
+    <div class="melon-details-card card">
+            <h2>{{ melon.common_name }}</h2>
+            <h3>Price per melon: {{ melon.price_str() }}</h3>
+            <ul>
+                <li>Color: {{ melon.color }}</li>
+                {% if melon.seedless %}
+                    <li>Seedless Melon</li>
+                {% else %}
+                    <li>Warning! This melon has seeds</li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
 
-    <a class="btn btn-primary" href="{{ url_for('add_to_cart', melon_id=melon.melon_id) }}">Add to Cart</a>
+    <div class="add-to-cart-div">
+        <form action=" {{url_for('melon_details', melon_id=melon.melon_id)}} " method="POST">
+            <div> {{form.quantity.label}}: {{form.quantity}} </div>
+            {{ form.csrf_token}}
+    
+            <button class="btn btn-primary" type="submit">Add To Cart</button>
+        </form>
+    </div>
 {% endblock %}
